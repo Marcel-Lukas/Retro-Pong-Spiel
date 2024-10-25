@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marcel Lukas">
+    <link rel="icon" type="image/png" href="src/favicon/favicon-48x48.png" sizes="48x48">
+    <link rel="icon" type="image/svg+xml" href="src/favicon/favicon.svg">
+    <link rel="shortcut icon" href="src/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="src/favicon/site.webmanifest">
+    <title>Retro Pong</title>
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+  </head>
+  <body>
+    <main>
+      <div>
+        <div>
+            <div id="score-container" >
+              <div class="score-box" >
+                <p>P1:</p>
+                <span id="score-p1">0</span>
+              </div>
+              <h1 id="retro" >Retro Pong</h1>
+              <div class="score-box" >
+                <p>P2:</p>
+                <span id="score-p2">0</span>
+              </div>             
+            </div>
+        </div>
+        <canvas id="ca" width="720" height="480" style="background-color: black;"></canvas>
+        <div id="guidancebox">
+          <div id="firstbar">
+            <span>P1 steuert mit W & S</span>
+            <a id="btn" href="index.html">Neustart</a>
+            <span>P2 steuert mit Pfeiltasten</span>
+        </div>
+        <div id="secondbar">
+          <img src="src/wasd.png" alt="WASD Tasten">
+
+          <div id="toggelswitch">
+            <span class="spanswitch">Sound</span>
+            <input id="checkbox" class="checkbox" name="checkbox" type="checkbox">
+            <label class="label" for="checkbox"></label>
+            <span class="spanswitch">On/Off</span>
+          </div>        
+          <div class="pause"><span>Pause</span></div>
+          <img src="src/pfeiltasten.png" alt="Pfeiltasten">
+        </div>
+          <div id="kontakt"><a href="https://github.com/Marcel-Lukas" target="_blank" rel="noopener noreferrer"><img id="gitcontact" src="src/github-contact.png" alt="GitHub Kontakt"></a></div>
+        </div>   
+      </div>
+    </main>
+    <audio id="hit-sound" src="src/beep.ogg"></audio>
+    <audio id="score-sound" src="src/tor.ogg"></audio>
+    <script src="src/main.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+          const logo = document.querySelector('#retro');
+          logo.classList.add('loaded');
+      });
+    </script>
+  </body>
+</html>
