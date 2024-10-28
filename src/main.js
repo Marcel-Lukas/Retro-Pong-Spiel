@@ -20,11 +20,9 @@ ballImage.src = 'src/ball.png';
 
 let isPaused = false;
 
-// Event listeners for keyboard input
 document.addEventListener('keydown', e => key[e.keyCode] = true);
 document.addEventListener('keyup', e => key[e.keyCode] = false);
 
-// Event listener for pause button
 document.querySelector('.pause').addEventListener('click', () => {
     isPaused = !isPaused;
 });
